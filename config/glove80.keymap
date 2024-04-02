@@ -17,7 +17,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <100>;
 };
 
 #define PUNCT 1
@@ -125,22 +125,22 @@
                                                                                                                             &none      &none      &none      &none      &none
                                                                                                                                                                                 &none
         &none
-                &none      &none      &none      &none      &none
-                                                                                                                            &none      &none      &none      &none      &none
+                &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT
+                                                                                                                            &kp CARET  &kp AMPS   &kp ASTRK  &kp BSLH   &kp PIPE
                                                                                                                                                                                 &none
         &none
                 &kp SLASH  &kp LBRC   &kp LBKT   &kp LPAR   &kp LT
-                                                                                                                            &kp GT     &kp RPAR   &kp RBKT   &kp RBRC   &kp DQT
+                                                                                                                            &kp GT     &kp RPAR   &kp RBKT   &kp RBRC   &kp COLON
+                                                                                                                                                                                &kp DQT
+        &none
+                &none      &none      &kp TILDE  &kp GRAVE  &none
+                                                                        &trans  &trans  &trans      &trans  &trans  &trans
+                                                                                                                            &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS   &kp QMARK
                                                                                                                                                                                 &none
         &none
-                &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT
+                &trans     &trans     &none      &none
                                                                         &trans  &trans  &trans      &trans  &trans  &trans
-                                                                                                                            &kp CARET  &kp AMPS   &kp ASTRK  &kp EQUAL  &kp SQT
-                                                                                                                                                                                &none
-        &none
-                &trans     &trans     &trans     &trans
-                                                                        &trans  &trans  &trans      &trans  &trans  &trans
-                                                                                                                                       &trans     &trans     &trans     &trans
+                                                                                                                                       &none      &none      &trans     &trans
                                                                                                                                                                                 &none
             >;
         };
@@ -164,14 +164,14 @@
                                                                                                                             &none      &kp LEFT   &kp DOWN   &kp RIGHT  &none
                                                                                                                                                                                 &none
         &none
-                &none      &none      &none      &none      &none
+                &none      &kp HOME   &none      &kp END    &none
                                                                         &trans  &trans  &trans      &trans  &trans  &trans
-                                                                                                                            &none      &none      &none      &none      &none
+                                                                                                                            &none      &kp HOME   &none      &kp END    &none
                                                                                                                                                                                 &none
         &none
-                &trans     &trans     &trans     &trans
+                &trans     &trans     &none      &none
                                                                         &trans  &trans  &trans      &trans  &trans  &trans
-                                                                                                                                       &trans     &trans     &trans     &trans
+                                                                                                                                       &none      &none      &trans     &trans
                                                                                                                                                                                 &none
             >;
         };
