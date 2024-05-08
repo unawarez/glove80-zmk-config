@@ -139,7 +139,7 @@
                                                                                                                                                                                 &none
         &none
                 &trans     &trans     &none      &none
-                                                                        &trans  &kp DEL &trans      &trans  &trans  &trans
+                                                                        &trans  &trans  &trans      &trans  &trans  &trans
                                                                                                                                        &none      &none      &trans     &trans
                                                                                                                                                                                 &none
             >;
@@ -170,7 +170,7 @@
                                                                                                                                                                                 &none
         &none
                 &trans     &trans     &none      &none
-                                                                        &trans  &trans  &trans      &trans  &trans  &trans
+                                                                        &trans  &kp DEL  &trans      &trans  &trans  &trans
                                                                                                                                        &none      &none      &trans     &trans
                                                                                                                                                                                 &none
             >;
