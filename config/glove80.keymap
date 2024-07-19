@@ -15,9 +15,13 @@
     tapping-term-ms = <100>;
 };
 
-#define PUNCT 1
-#define NAV 2
-#define MAGIC 3
+// this whole zmk dt system is dumb and obnoxious; the order of the items in
+// the dt list below is their actual indices, and if it doesn't match these
+// #defines then it just goes slightly insane.
+#define GAME 1
+#define PUNCT 2
+#define NAV 3
+#define MAGIC 4
 
 
 / {
@@ -105,7 +109,19 @@
     &kp TAB        &kp Q    &kp W     &kp E      &kp R      &kp T                                                                           &kp Y   &kp U      &kp I     &kp O     &kp P    &none
 &mt LCTRL ESC      &kp A    &kp S     &kp D      &kp F      &kp G                                                                           &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
     &none          &kp Z    &kp X     &kp C      &kp V      &kp B &kp LSHFT        &kp LGUI  &kp LCTRL   &kp RCTRL  &kp RGUI  &kp RSHFT   &kp N   &kp M    &kp COMMA   &kp DOT  &kp FSLH    &none
- &magic MAGIC 0    &none    &none     &mo NAV    &mo PUNCT        &mt LSHFT SPACE  &kp BKSP  &kp LALT    &kp RALT   &kp RET   &mt RSHFT SPACE     &mo PUNCT   &mo NAV  &none     &none      &none
+ &magic MAGIC 0  &tog GAME  &none     &mo NAV    &mo PUNCT        &mt LSHFT SPACE  &kp BKSP  &kp LALT    &kp RALT   &kp RET   &mt RSHFT SPACE     &mo PUNCT   &mo NAV  &none     &none      &none
+            >;
+        };
+
+        // disable modtaps etc
+        game {
+            bindings = <
+     &trans    &trans  &trans  &trans  &trans                                                                            &trans  &trans  &trans  &trans  &trans
+     &kp ESC   &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans  &trans  &trans  &trans  &trans
+     &trans    &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans  &trans  &trans  &trans  &trans
+     &kp LCTRL &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans  &trans  &trans  &trans  &trans
+     &trans    &trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans     &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+     &trans    &trans  &trans  &trans  &trans           &kp SPACE &trans  &trans     &trans  &trans  &kp SPACE           &trans  &trans  &trans  &trans  &trans
             >;
         };
 
