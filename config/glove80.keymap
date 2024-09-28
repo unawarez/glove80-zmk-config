@@ -12,9 +12,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <100>;
     // quick-tap-ms enables repeating like qmk
-    quick-tap-ms = <150>;
+    quick-tap-ms = <100>;
 };
 
 // this whole zmk dt system is dumb and obnoxious; the order of the items in
