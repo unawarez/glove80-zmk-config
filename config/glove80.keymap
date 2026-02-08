@@ -13,8 +13,9 @@
 
 &mt {
     tapping-term-ms = <100>;
-    // quick-tap-ms enables repeating like qmk
-    quick-tap-ms = <200>;
+    flavor = "hold-preferred"; // similar to HOLD_ON_OTHER_KEY_PRESS in qmk
+    hold-while-undecided; // seems to happen by default anyway?
+    quick-tap-ms = <200>; // force repeating the key like qmk
 };
 
 // this whole zmk dt system is dumb and obnoxious; the order of the items in
@@ -45,8 +46,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "hold-preferred"; // similar to HOLD_ON_OTHER_KEY_PRESS in qmk
+            tapping-term-ms = <100>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
     };
