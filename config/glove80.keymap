@@ -13,7 +13,9 @@
 
 &mt {
     tapping-term-ms = <100>;
-    flavor = "hold-preferred"; // similar to HOLD_ON_OTHER_KEY_PRESS in qmk
+    flavor = "balanced";
+    // docs say "hold-preferred" should be equivalent to my qmk settings but I am getting crazy false holds,
+    // implies something is just physically different about me typing on this keyboard?
     hold-while-undecided; // seems to happen by default anyway?
     quick-tap-ms = <200>; // force repeating the key like qmk
 };
